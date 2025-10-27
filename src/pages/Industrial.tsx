@@ -39,7 +39,7 @@ export default function Industrial() {
 
     const fetchReports = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/reports");
+        const res = await fetch("https://eco-watch-d05f.onrender.com/api/reports");
         const json = await res.json();
         if (isMounted) {
           if (json.success) {
@@ -50,7 +50,7 @@ export default function Industrial() {
           }
         }
       } catch (err) {
-        console.error("❌ Error fetching reports:", err);
+        console.error("Error fetching reports:", err);
         if (isMounted) setError("Network error while fetching reports");
       } finally {
         if (isMounted) setLoading(false);

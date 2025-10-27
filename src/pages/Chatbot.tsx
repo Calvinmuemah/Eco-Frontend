@@ -30,7 +30,7 @@ interface SessionPreview {
   lastDate?: string;
 }
 
-const API_BASE_URL = "http://localhost:5000/api/chat";
+const API_BASE_URL = "https://eco-watch-d05f.onrender.com/api/chat";
 
 // 🧩 Helper for date separators
 const formatDateLabel = (date: Date) => {
@@ -151,7 +151,7 @@ export default function Chatbot() {
           ...prev,
           {
             role: "bot",
-            content: "⚠️ Sorry, I couldn’t process your message.",
+            content: "Sorry, I couldn’t process your message.",
             timestamp: new Date(),
           },
         ]);
@@ -162,7 +162,7 @@ export default function Chatbot() {
         ...prev,
         {
           role: "bot",
-          content: "❌ Network error. Please try again later.",
+          content: "Network error. Please try again later.",
           timestamp: new Date(),
         },
       ]);

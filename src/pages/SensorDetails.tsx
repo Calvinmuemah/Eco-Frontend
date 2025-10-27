@@ -11,7 +11,7 @@ export default function SensorDetails() {
 
   useEffect(() => {
     const fetchSensor = async () => {
-      const res = await fetch(`http://localhost:5000/api/sensor-data/latest`);
+      const res = await fetch(`https://eco-watch-d05f.onrender.com/api/sensor-data/latest`);
       const data = await res.json();
       const readings = Array.isArray(data) ? data : data.data ? data.data : [data];
       const found = readings.find((r: any) => r.deviceId === id);

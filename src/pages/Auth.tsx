@@ -48,7 +48,7 @@ export default function Auth() {
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
 
-  const API_BASE_URL = "http://localhost:5000/api/auth"; // ⚙️ Backend URL
+  const API_BASE_URL = "https://eco-watch-d05f.onrender.com/api/auth";
 
   // 🔁 Auto redirect if already logged in
   useEffect(() => {

@@ -72,7 +72,7 @@ export default function Sensors() {
 
     const fetchSensors = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/sensor-data/latest");
+        const res = await fetch("https://eco-watch-d05f.onrender.com/api/sensor-data/latest");
         const data = await res.json();
 
         // Normalize shape: may be an object or array
@@ -91,7 +91,7 @@ export default function Sensors() {
           setSensorList(processed);
         }
       } catch (err) {
-        console.error("❌ Error fetching sensor data:", err);
+        console.error("Error fetching sensor data:", err);
       } finally {
         if (isMounted) setLoading(false);
       }

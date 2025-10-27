@@ -101,14 +101,14 @@ export default function Dashboard() {
 
     const fetchData = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/sensor-data/latest");
+        const res = await fetch("https://eco-watch-d05f.onrender.com/api/sensor-data/latest");
         const json = await res.json();
         if (isMounted) {
           setData(json);
           setLastUpdate(new Date());
         }
       } catch (err) {
-        console.error("❌ Failed to fetch sensor data:", err);
+        console.error("Failed to fetch sensor data:", err);
       } finally {
         if (isMounted) setLoading(false);
       }
